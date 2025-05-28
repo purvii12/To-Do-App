@@ -16,18 +16,18 @@ A visually appealing, sticky-note-inspired Todo App built with React. Easily man
 - CSS (Custom styling)
 
 ## 📂 Folder Structure
-/src
-├── components
-│ ├── AddTodo.js
-│ ├── TodoList.js
-│ └── TodoItem.js
-├── styles
-│ ├── App.css
-│ └── TodoItem.css
-└── App.js
+/src <br>
+├── components <br>
+│ ├── AddTodo.js <br>
+│ ├── TodoList.js <br>
+│ └── TodoItem.js <br>
+├── styles <br>
+│ ├── App.css <br>
+│ └── TodoItem.css <br>
+└── App.js <br>
 
 ## 💡 Future Enhancements
--Persist data using local storage or a backend
--Dark mode toggle
--Drag-and-drop reorder support
--Filter by completed/incomplete
+-Persist data using local storage or a backend <br>
+-Dark mode toggle <br>
+-Drag-and-drop reorder support. <br>
+-Filter by completed/incomplete. <br>
