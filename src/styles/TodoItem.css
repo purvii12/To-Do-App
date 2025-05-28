@@ -1,0 +1,241 @@
+.todo-item {
+  width: 100%;
+  min-height: 100px;
+  background: #fff1ab;
+  border-radius: 18px 22px 16px 14px;
+  box-shadow: 0 4px 18px 0 rgba(0,0,0,0.13), 0 2px 4px rgba(0,0,0,0.08);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+}
+
+.todo-item:nth-child(5n+1) { background: #d0c3f1; }
+.todo-item:nth-child(5n+2) { background: #e9f9e5; }
+.todo-item:nth-child(5n+3) { background: #ceeef8; }
+.todo-item:nth-child(5n+4) { background: #ffd7ee; }
+.todo-item:nth-child(5n)   { background: #fff1ab; }
+
+.todo-item:hover {
+  transform: rotate(-1deg) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.19), 0 4px 8px rgba(0,0,0,0.13);
+  z-index: 5;
+}
+
+.todo-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 14px 16px 10px 16px;
+  gap: 10px;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.expand-btn {
+  background: none;
+  color: #888;
+  font-size: 1rem;
+  border: none;
+  box-shadow: none;
+  padding: 0 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+.expand-btn:hover {
+  color: #444;
+  background: none;
+}
+.expand-label {
+  font-size: 0.95em;
+  margin-left: 4px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+}
+
+.circle-tick {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.18s, background 0.18s;
+  margin-left: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #0001;
+  font-size: 1.2em;
+  padding: 0;
+}
+.circle-tick svg {
+  display: block;
+}
+.circle-tick.checked {
+  background: #e6e0f8;
+  box-shadow: 0 2px 8px #6a4caf22;
+}
+.circle-tick:hover {
+  background: #f3f0fa;
+}
+
+.todo-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.todo-title {
+  font-size: 1.13rem;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 2px;
+  word-break: break-word;
+  transition: color 0.2s;
+}
+.strikethrough {
+  text-decoration: line-through;
+  color: #222;
+  opacity: 0.7;
+}
+
+.todo-duration {
+  display: block;
+  font-size: 0.88rem;
+  color: #aaa;
+  font-family: inherit;
+  margin: 1px 0 0 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 7px;
+  border: 2px solid #b39ddb;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.95);
+  color: #333;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+.edit-btn {
+  background: #ededed;
+  color: #888;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-btn:hover {
+  background: #e0e0e0;
+  color: #555;
+}
+
+.delete-btn {
+  background: #e57373;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.delete-btn:hover {
+  background: #c62828;
+}
+
+.save-btn {
+  background: #388e3c;
+  color: #fff;
+}
+.save-btn:hover {
+  background: #1b5e20;
+}
+
+.cancel-btn {
+  background: #bdbdbd;
+  color: #333;
+}
+.cancel-btn:hover {
+  background: #757575;
+  color: #fff;
+}
+
+.todo-expand-wrapper {
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.25s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+}
+
+.todo-expanded {
+  padding: 0 16px 10px 16px;
+  background: none;
+  margin: 0;
+  border: none;
+}
+
+.todo-description {
+  margin: 6px 0 0 0;
+  color: #444;
+  line-height: 1.4;
+  font-size: 0.97rem;
+  max-height: 100px;
+  overflow-y: auto;
+  background: none;
+  border-left: 2px solid #eee;
+  padding-left: 8px;
+}
+
+.edit-textarea {
+  width: 100%;
+  height: 48px;
+  padding: 7px;
+  border: 2px solid #b39ddb;
+  border-radius: 6px;
+  resize: vertical;
+  margin-top: 6px;
+  font-size: 0.99rem;
+  background: rgba(255,255,255,0.95);
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .todo-item {
+    min-height: 80px;
+    max-height: none;
+    padding: 8px;
+  }
+  .todo-title {
+    font-size: 1rem;
+  }
+}
