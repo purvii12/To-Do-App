@@ -6,7 +6,7 @@ A visually appealing, sticky-note-inspired Todo App built with React. Easily man
 
 ## 🖼️ Project Screenshot
 
-![Todo Board Screenshot](./assets/To-do-app-screenshot.png)  
+![Todo Board Screenshot](./To-do-app-screenshot.png)  
 *Screenshot showcasing the Todo Board interface.*
 
 ---
