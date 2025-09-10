@@ -1,6 +1,6 @@
 # 🗒️ Todo Board - Sticky Note Style React App
 
-A visually appealing, sticky-note-inspired Todo App built with React. Easily manage your tasks — add, edit, complete, or delete todos with smooth animations and a clean interface.
+A visually appealing, sticky-note-inspired Todo App built with React. Easily manage your tasks - add, edit, complete, or delete todos with smooth animations and a clean interface.
 
 ---
 
